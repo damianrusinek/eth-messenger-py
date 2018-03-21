@@ -18,7 +18,7 @@ I want to use this tool for Responsible Disclosure. I firstly leave the encrypte
 ### Usage
 
 ```
-python eth-messanger.py [options]
+python eth-messenger.py [options]
 ```
 
 ### Options
@@ -38,22 +38,23 @@ python eth-messanger.py [options]
 ### Example
 
 ```
-python eth-messanger.py -t -e 0x3b752fd232ed1a110af83c4d955c044251be0d23 -m "TEST" -s -f 0
+python eth-messenger.py -t -e 0x3b752fd232ed1a110af83c4d955c044251be0d23 -m "TEST" -s -f 0
 ```
 
-Using the above command, the messanger will:
+Using the above command, the messenger will:
 * encrypt the message `TEST` with the public key of the owner of `0x3b752fd232ed1a110af83c4d955c044251be0d23` address,
 * send the transaction with encypted message from the first local account.
 
 
 ```
-python eth-messanger.py -t -d 0xc490405c22e65008ec79bd80a532ffdfa1bdaa44e23bda034fea5569358cb130
+python eth-messenger.py -t -d 0xc490405c22e65008ec79bd80a532ffdfa1bdaa44e23bda034fea5569358cb130
 ```
 
-Using the above command, the messanger will:
+Using the above command, the messenger will:
 * read the address of the message receiver and encrypted message from `0xc490405c22e65008ec79bd80a532ffdfa1bdaa44e23bda034fea5569358cb130` transaction data,
 * ask for the private key of the receiver,
-* decrypt and print the message with the private key of the owner.
+* decrypt the message with the private key of the owner,
+* print decrypted message.
 
 ### License 
 
