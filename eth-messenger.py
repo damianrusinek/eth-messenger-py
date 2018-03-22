@@ -20,35 +20,36 @@ if __name__ == "__main__":
                 action="store_true", default=False,
                 help="list all accounts")
     parser.add_option("-e", "--encrypt", dest="encrypt",
-                metavar="address",
-                help="encrypt message to <address>")
+                metavar="<address>",
+                help="encrypt message for the owner of <address>")
     parser.add_option("-d", "--decrypt", dest="decrypt",
-                metavar="tx_hash",
+                metavar="<tx_hash>",
                 help="decrypt message sent in <tx_hash>")
     parser.add_option("-m", "--message", dest="message",
-                help="message to encrypt")
+                metavar="<message>",
+                help="specify the message to encrypt")
     parser.add_option("-s", "--send", dest="send",
                 action="store_true", default=False,
-                help="send encrypted data")
+                help="send encrypted message")
     parser.add_option("-f", "--from", dest="send_from",
-                metavar="address|number", default="0",
-                help="send encrypted message from address specified explicitly "
-                     "or with its number (see accounts list) [default: %default]")
+                metavar="<sender_address>|<index>", default="0",
+                help="specify your sender address explicitly or with its index "
+                     "(see accounts list) [default: %default]")
     parser.add_option("-p", "--sent-transaction", dest="sent_transaction",
-                metavar="hash",
-                help="hash of any transaction sent by address "
-                "(use it when the the address is personal)")
+                metavar="<tx_hash>",
+                help="specify the hash of any out transaction sent by <address> "
+                     "(use it when the the <address> is personal)")
     parser.add_option("-c", "--creation-transaction", 
-                metavar="hash",
+                metavar="<tx_hash>",
                 dest="creation_transaction",
-                help="hash of transaction that created contract "
-                "(use it when the the address is contract)")
+                help="specify the hash of transaction that created contract "
+                     "(use it when the the <address> is contract)")
     parser.add_option("-t", "--testnet", dest="testnet",
                 action="store_true", default=False,
                 help="use ropsten network")
     parser.add_option("-i", "--ipcpath", dest="ipcpath",
-                default=None, metavar="path",
-                help="path to geth.ipc")
+                default=None, metavar="<path>",
+                help="specify the path to geth.ipc file")
     
     vars(parser.get_default_values())
     (options, args) = parser.parse_args()

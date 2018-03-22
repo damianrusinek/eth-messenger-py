@@ -25,13 +25,13 @@ python eth-messenger.py [options]
 
 * `-h, --help` - print a help message.
 * `-l, --list` - list all accounts.
-* `-e <address>, --encrypt=<address>` - encrypt message send to the owner of <address>.
+* `-e <address>, --encrypt=<address>` - encrypt message for the owner of <address>.
 * `-d <tx_hash>, --decrypt=<tx_hash>` - decrypt message sent in <tx_hash>.
 * `-m <message>, --message=<message>` - specify the message to encrypt.
-* `-s, --send` - send encrypted data.
-* `-f <address>|<index>, --from=<address>|<index>` - specify your address to send transaction explicitly or with its index (see accounts list) [default: 0].
-* `-p <tx_hash>, --sent-transaction=<tx_hash>` - specify the hash of any out transaction sent by address (use it when the the <address> is personal).
-* `-c <tx_hash>, --creation-transaction=<tx_hash>` - specify the hash of transaction that created contract (use it when the the <address> is contract)
+* `-s, --send` - send encrypted message.
+* `-f <sender_address>|<index>, --from=<sender_address>|<index>` - specify your sender address explicitly or with its index (see accounts list) [default: 0].
+* `-p <tx_hash>, --sent-transaction=<tx_hash>` - specify the hash of any out transaction sent by <address> (use it when the the <address> is personal).
+* `-c <tx_hash>, --creation-transaction=<tx_hash>` - specify the hash of transaction that created contract (use it when the the <address> is contract).
 * `-t, --testnet` -  use ropsten network.
 * `-i <path>, --ipcpath=<path>` - specify the path to `geth.ipc` file.
 
