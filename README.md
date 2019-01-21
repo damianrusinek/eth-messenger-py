@@ -1,7 +1,7 @@
 Ethereum RD Messenger in Python (by @drdr_zz).
 ========================================
 
-**UPDATE** Check out JavaScript online version: https://github.com/damianrusinek/eth-messenger-dapp  
+**UPDATE** Check out JavaScript online version: https://securing.github.io/eth-rd-messenger/  
 
 This tool is used to:
 * send a secret message to the owner of a personal or contract Ethereum address, encypted with its owner ECC public key,
